@@ -16,12 +16,6 @@ Live Streaming est une plateforme de streaming de films qui permet aux utilisate
 - **Frontend :** HTML, CSS et Javascript avec un framework comme React.js pour l'interface utilisateur.
 - **Backend :** PHP pour la gestion du formulaire et du système de connexion.
 
-## Installation
-
-1. Clonez ce dépôt sur votre machine locale.
-2. Configurez votre base de données SQL.
-3. Renommez le fichier `.env.example` en `.env` et configurez les variables d'environnement nécessaires.
-
 ## Auteurs
 
 - Andy LOUIS

@@ -88,19 +88,38 @@ footer {
 
 .content {
   text-align: center;
+  margin: 5rem;
 }
 
-.content input{
+.content input {
   width: 42rem;
   padding: 0.6rem;
   background-color: #d9d9d9;
   border: 0.1rem solid;
 }
 
-.content button{
+.content button {
   margin-left: 1rem;
   padding: 0.6rem 4rem;
   background-color: #262626;
-  color: #FFF;
+  color: #fff;
   border-radius: 0.6rem;
+}
+
+.secondary-t h3 {
+  text-align: center;
+  margin: 5rem;
+}
+
+.content-2 {
+  width: 79rem;
+  padding: 5rem;
+  background-color: #d9d9d9;
+  margin: auto;
+  border-radius: 3rem;
+  margin: 5rem auto;
+}
+
+.content-2 p {
+  text-align: center;
 }
