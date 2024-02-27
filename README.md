@@ -4,6 +4,9 @@ Live Streaming est une plateforme de streaming de films qui permet aux utilisate
 
 #### [Afficher le site](https://lowkeyalways.github.io/CDA_Streaming_Project/)
 
+Palette Graphique :
+![Palette](./asset/Palette.png)
+
 ## Fonctionnalités
 
 - **Catalogue de Films :** StreamingCiné offre un catalogue de films diversifié, couvrant différents genres, langues et périodes.
