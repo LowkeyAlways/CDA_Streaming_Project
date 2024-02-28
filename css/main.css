@@ -156,3 +156,53 @@ footer {
 .movies ul li {
   margin: 1rem 2rem 0rem 0rem;
 }
+
+.banner {
+  text-align: center;
+  margin: 8rem;
+}
+
+.banner img {
+  width: 1133px;
+  height: 454px;
+  border-radius: 3rem;
+}
+
+form {
+  text-align: center;
+  margin: 5rem 0rem 10rem 0rem;
+}
+
+fieldset {
+  width: 50rem;
+  margin: auto;
+  border: 0;
+}
+
+legend {
+  text-align: center;
+}
+
+label {
+  float: left;
+}
+
+form input {
+  margin: 0.3rem;
+  margin-bottom: 3rem;
+  width: 50rem;
+  padding: 0.6rem;
+  background-color: #d9d9d9;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+}
+
+form input::placeholder {
+  color: #4d4d4d;
+}
+
+.button input {
+  width: 25rem;
+  padding: 1.2rem;
+  border-radius: 2rem;
+}
