@@ -1,10 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
+:root{
+  --background-main: #fff;
+  --primary-color: #9e9e9e;
+  --primary-color2: #9e9e9e;
+  --secondary-color: #d9d9d9;
+  --third-color: #262626;
+  --primary-font-color: #000;
+  --secondary-font-color: #fff;
+  --box-shadow1: 1px 1px 5px 4px #848484;
+  --box-shadow2: 0 1px 3px #595959;
+  --placeholder-color: #4d4d4d;
+}
+
+body.dark-theme{
+  --background-main: #373737;
+  --primary-color: #5d5d5d;
+  --primary-color2: #878787;
+  --secondary-color: #676767;
+  --third-color: #c7c7c7;
+  --primary-font-color: #ffffff;
+  --secondary-font-color: #000000;
+  --box-shadow1: 1px 1px 5px 4px #4f4f4f;
+  --box-shadow2: 0 1px 3px #595959;
+  --placeholder-color: #ffffff6b;
+
+}
+
+body{
+  background-color: var(--background-main);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #9e9e9e;
+  background-color: var(--primary-color);
   margin-bottom: 10rem;
 }
 
@@ -36,11 +67,21 @@ nav ul li:last-child {
   align-items: center;
 }
 
+.second-ul{
+  display: flex;
+}
+
+.change-theme{
+  cursor: pointer;
+  font-size: 2.25rem;
+}
+
 .nav-link {
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
   border-radius: 1.5rem;
-  box-shadow: 1px 1px 5px 4px #848484;
+  box-shadow: var(--box-shadow1);
+  color: var(--primary-font-color);
 }
 
 .title {
@@ -51,9 +92,10 @@ nav ul li:last-child {
   justify-content: center;
   margin-top: 5rem;
   padding: 3rem;
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   margin: auto;
   border-radius: 3rem;
+  color: var(--primary-font-color);
 }
 
 footer {
@@ -68,6 +110,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--primary-font-color);
 }
 
 .secondary-title ul {
@@ -95,15 +138,19 @@ footer {
 .content input {
   width: 42rem;
   padding: 0.6rem;
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   border: 0.1rem solid;
+}
+
+.content input::placeholder{
+  color: var(--placeholder-color);
 }
 
 .content button {
   margin-left: 1rem;
   padding: 0.6rem 4rem;
-  background-color: #262626;
-  color: #fff;
+  background-color: var(--third-color);
+  color: var(--secondary-font-color);
   border-radius: 0.6rem;
 }
 
@@ -114,12 +161,15 @@ footer {
 .secondary-t h3 {
   text-align: center;
   margin: 5rem;
+  color: var(--primary-font-color);
 }
+
+
 
 .content-2 {
   width: 79rem;
   padding: 5rem;
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   margin: auto;
   border-radius: 3rem;
   margin: 10rem auto;
@@ -127,6 +177,7 @@ footer {
 
 .content-2 p {
   text-align: center;
+  color: var(--primary-font-color);
 }
 
 .movies {
@@ -185,9 +236,9 @@ legend {
   width: 20rem;
   margin: auto;
   padding: 1.5rem;
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   border-radius: 3rem;
-  box-shadow: 0 1px 3px #595959;
+  box-shadow: var(--box-shadow2);
 }
 
 label {
@@ -199,17 +250,21 @@ form input {
   margin-bottom: 3rem;
   width: 50rem;
   padding: 0.6rem;
-  background-color: #d9d9d9;
+  background-color: var(--secondary-color);
   border: 0.1rem solid;
   border-radius: 0.5rem;
 }
 
 form input::placeholder {
-  color: #4d4d4d;
+  color: var(--placeholder-color);
 }
 
 .button input {
   width: 25rem;
   padding: 1.2rem;
   border-radius: 2rem;
+}
+
+footer p{
+  color: var(--primary-font-color);
 }
