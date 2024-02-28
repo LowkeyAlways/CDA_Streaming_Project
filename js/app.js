@@ -1,29 +1,28 @@
 document.addEventListener("DOMContentLoaded", e => {
 
-
     /*==================== Mode Sombre ====================*/
     const themeButton = document.getElementById('theme-button');
     const darkTheme = 'dark-theme';
     const iconTheme = 'fa-sun';
+    const moonIcon = 'fa-moon';
 
     const selectedTheme = localStorage.getItem('selected-theme');
-    const selectedIcon = localStorage.getItem('selected-icon');
 
     const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon' : 'fa-sun';
+
+    const toggleIcon = () => {
+        themeButton.classList.toggle(iconTheme);
+        themeButton.classList.toggle(moonIcon);
+    };
 
     if (selectedTheme) {
-
         document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-        themeButton.classList[selectedIcon === 'fa-moon' ? 'add' : 'remove'](iconTheme);
+        toggleIcon();
     }
 
     themeButton.addEventListener('click', () => {
-
         document.body.classList.toggle(darkTheme);
-        themeButton.classList.toggle(iconTheme);
-
+        toggleIcon();
         localStorage.setItem('selected-theme', getCurrentTheme());
-        localStorage.setItem('selected-icon', getCurrentIcon());
     });
-})
+});
