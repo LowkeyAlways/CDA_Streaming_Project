@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
-
-
 :root {
   --background-main: #fff;
   --primary-color: #9e9e9e;
@@ -14,7 +12,7 @@
   --box-shadow2: 0 1px 3px #595959;
   --box-shadow3: 0 1px 10px #bdbdbd;
   --placeholder-color: #cbcbcb;
-  --border:#c4c4c4;
+  --border: #c4c4c4;
 }
 
 body.dark-theme {
@@ -29,7 +27,7 @@ body.dark-theme {
   --box-shadow2: 0 1px 3px #595959;
   --box-shadow3: 0 1px 10px #bdbdbd;
   --placeholder-color: #f2f2f2b0;
-  --border:#898989;
+  --border: #898989;
 }
 
 body {
@@ -115,6 +113,14 @@ nav ul li:last-child {
   align-items: center;
   justify-content: center;
   color: var(--primary-font-color);
+}
+
+.secondary-title ul:first-child {
+  padding: 3rem;
+  background-color: var(--secondary-color);
+  border-radius: 3rem;
+  color: var(--primary-font-color);
+  box-shadow: var(--box-shadow2);
 }
 
 .secondary-title ul {
@@ -258,6 +264,12 @@ fieldset {
   width: 50rem;
   padding: 3rem;
   height: 57rem;
+}
+
+.login {
+  width: 30rem;
+  padding: 2rem;
+  height: 32rem;
 }
 
 legend {
