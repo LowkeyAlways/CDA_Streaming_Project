@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +29,7 @@
         <li>
           <a href="#"><img class="logo" src="../asset/logo.png" alt="" /></a>
         </li>
-        <li><a href="../index.html" class="nav-link">Accueil</a></li>
+        <li><a href="../index.php" class="nav-link">Accueil</a></li>
         <li><a href="./NosFilms.php" class="nav-link">Nos films</a></li>
       </ul>
       <ul class="second-ul">
@@ -51,7 +56,7 @@
     <div class="forms">
       <legend>Connectez vous</legend>
       <fieldset class="login">
-        <form action="" method="post">
+        <form class="form_login" action="" method="post">
           <label for="email">E-mail</label><br />
           <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true" required /><br />
 
@@ -62,6 +67,10 @@
           </div>
         </form>
       </fieldset>
+      <?php
+            //inclusion
+            include_once "../Controller/log.inc.php";
+            ?>
     </div>
   </main>
   <footer>
@@ -72,3 +81,4 @@
 </body>
 
 </html>
+

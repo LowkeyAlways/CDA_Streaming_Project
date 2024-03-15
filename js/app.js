@@ -25,4 +25,5 @@ document.addEventListener("DOMContentLoaded", e => {
         toggleIcon();
         localStorage.setItem('selected-theme', getCurrentTheme());
     });
+    
 });

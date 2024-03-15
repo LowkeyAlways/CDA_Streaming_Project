@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Live Streaming</title>
   <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/main1.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
@@ -24,14 +24,14 @@
         <li>
           <a href="#"><img class="logo" src="../asset/logo.png" alt="" /></a>
         </li>
-        <li><a href="../index.html" class="nav-link">Accueil</a></li>
+        <li><a href="../index.php" class="nav-link">Accueil</a></li>
         <li>
           <a href="./NosFilms.php" class="nav-link">Nos films</a>
         </li>
       </ul>
       <ul class="second-ul">
         <li>
-          <a href=".//Login.php" class="nav-link">Se connecter</a>
+          <a href="./Login.php" class="nav-link">Se connecter</a>
         </li>
         <li><a href="#" class="nav-link">S'inscrire</a></li>
         <li class="nav_btns">
@@ -51,28 +51,32 @@
     <div class="forms">
       <legend>Créer un compte</legend>
       <fieldset class="subscribe">
-        <form action="" method="post">
+        <form class="form_sub" action="" method="post">
           <label for="user-lastname">Nom</label><br />
-          <input type="text" id="lastname" name="nom" placeholder="Nom" aria-required="true" required /><br />
+          <input type="text" class="input" id="lastname" name="nom" placeholder="Nom" aria-required="true" required /><br />
 
           <label for="user-firstname">Prénom</label><br />
-          <input type="text" id="name" name="prénom" placeholder="Prénom" aria-required="true" required /><br />
+          <input type="text" class="input" id="name" name="prénom" placeholder="Prénom" aria-required="true" required /><br />
 
           <label for="email">E-mail</label><br />
-          <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true" required /><br />
+          <input type="email" class="input" id="email" name="mail" placeholder="E-mail" aria-required="true" required /><br />
 
           <label for="email">Mot de passe</label><br />
-          <input type="password" id="password" name="psw" placeholder="Mot de passe" aria-required="true" required />
+          <input type="password" class="input" id="password" name="psw" placeholder="Mot de passe" aria-required="true" required />
           <br />
 
           <label for="email">Pays</label><br />
-          <input type="text" id="pays" name="pays" placeholder="Pays" aria-required="true" required />
+          <input type="text" class="input" id="pays" name="pays" placeholder="Pays" aria-required="true" required />
 
           <div class="button">
             <input type="submit" name="submit" value="Valider" />
           </div>
         </form>
       </fieldset>
+      <?php
+            //inclusion
+            include_once "../Controller/traitement.inc.php";
+            ?>
     </div>
   </main>
   <footer>
