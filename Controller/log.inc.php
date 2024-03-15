@@ -2,10 +2,11 @@
         try{// On se connecte à MySQL
             error_reporting(E_ALL & ~E_WARNING);
                 $prenom = $_POST['prénom'];
+                $nom = $_POST['nom'];
                 $email = $_POST['mail'];
                 $password = $_POST['psw'];
                 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-                $bdd = new PDO('mysql:host=localhost;dbname=gmail', 'andy', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
+                $bdd = new PDO('mysql:host=localhost;dbname=streaming', 'andy', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
                 
                 $sql = "SELECT * FROM accounts WHERE login = '$email' ";
                 $result = $bdd->prepare($sql);
@@ -17,7 +18,7 @@
                     {
                         echo "<p class=\"success\">Vous êtes bien connectés !
                         </p>";
-                        $_SESSION['name'] = $email;
+                        $_SESSION['name'] = $prenom;
                     }
                     else
                     {
