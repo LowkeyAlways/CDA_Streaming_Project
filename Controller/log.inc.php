@@ -9,7 +9,7 @@
                 $bdd = new PDO('mysql:host=localhost;dbname=streaming', 'andy', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
                 
                 $sql = "SELECT * FROM accounts WHERE login = '$email' ";
-                $result = $bdd->prepare($sql);
+                $result = $bdd->prepare($sql); 
                 $result->execute();
                     
                 if(isset($_POST['mail']) && isset($_POST['psw'])){
