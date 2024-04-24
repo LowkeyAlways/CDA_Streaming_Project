@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Live Streaming</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="./favicon/site.webmanifest">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="first-ul">
-          <li>
-            <a href="#"><img class="logo" src="./asset/logo.png" alt="" /></a>
-          </li>
-          <li><a href="#" class="nav-link">Accueil</a></li>
-          <li><a href="./View/NosFilms.php" class="nav-link">Nos films</a></li>
-        </ul>
-        <ul class="second-ul">
-          <li><a href="./View/Login.php" class="nav-link">Se connecter</a></li>
-          <li><a href="./View/Subscribe.php" class="nav-link">S'inscrire</a></li>
-          <li class="nav_btns"><i class="fa-solid fa-moon change-theme" tabindex=0 aria-hidden="true" id="theme-button"></i></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="title">
-        <img class="logo" src="./asset/logo.png" alt="" />
-        <h1>Films d’horreur, thriller et bien plus en illimité</h1>
-      </div>
-      <div class="secondary-t">
-        <h3>
-          Prêt à regarder ? Saisissez votre adresse mail pour vous abonner.
-          <br />
-          Le tout à 5,99 €
-        </h3>
-      </div>
-      <div class="content">
-        <input type="text" placeholder="Adresse mail" />
-        <button>Commencer</button>
-      </div>
-      <div class="content-2">
-        <p>Tous les mois profitez de toutes les nouveautés cinéma. A partir du mois prochain on vous propose tous les classiques du cinéma d'horreur ou thriller. Où que vous soyez. Tous les films en VO, VOST, VF et plus d'options.</p>
-      </div>
-    </main>
-    <footer>
-      <p></p>
-    </footer>
-    <script src="./js/app.js"></script>
-    <script src="./js/date.js"></script>
-  </body>
-</html>
+<?php
+// Inclure le fichier bootstrap.php pour initialiser la connexion à la base de données et le contrôleur UserController
+include_once "./config/db_conn.php";
+
+// Analyser l'URL pour déterminer quelle action de contrôleur doit être exécutée
+$action = isset($_GET['action']) ? $_GET['action'] : 'default';
+
+// Sélectionner le contrôleur approprié en fonction de l'action demandée
+switch ($action) {
+    case 'login':
+        // Appeler la méthode login dans le contrôleur UserController
+        $userController->connexion();
+        break;
+    case 'subscribe':
+        // Appeler la méthode subscribe dans le contrôleur UserController
+        $userController->subscribe();
+        break;
+    case 'nosfilms':
+        // Inclure le fichier NosFilms.php
+        include_once "./Views/NosFilms.php";
+        break;
+    default:
+        // Action par défaut si aucune action spécifique n'est demandée
+        // Par exemple, rediriger vers une page d'accueil ou afficher une erreur 404
+        echo "Page not found";
+}
+?>

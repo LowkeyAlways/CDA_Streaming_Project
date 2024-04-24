@@ -35,6 +35,7 @@ body.dark-theme {
 }
 
 body {
+  /* background-color: var(--background-main); */
   background-image: url(../asset/background5.png);
   height: 100%;
   background-position: center;
@@ -249,10 +250,9 @@ nav ul li:last-child {
   margin-bottom: 15rem;
 }
 
-.form_login,
-.form_sub {
+.form_login .form_sub {
   text-align: center;
-  margin: 3rem 0rem 10rem 0rem;
+  margin: 5rem 0rem 10rem 0rem;
 }
 
 fieldset {
@@ -292,23 +292,6 @@ label {
   color: var(--primary-font-color);
 }
 
-.location {
-  margin-bottom: 10rem;
-  display: flex;
-  justify-content: center;
-}
-
-.location h3 {
-  margin-right: 1rem;
-  color: var(--primary-font-color);
-  font-size: x-large;
-}
-
-form select {
-  width: 10rem;
-  height: 2.5rem;
-}
-
 form input {
   margin: 0.3rem;
   margin-bottom: 3rem;
@@ -319,8 +302,8 @@ form input {
   border-radius: 0.5rem;
 }
 
-.input.focused {
-  color: white; /* Or any other color you want */
+form input::placeholder {
+  color: var(--placeholder-color);
 }
 
 .button input {
@@ -333,64 +316,21 @@ form input {
   font-size: 1.5rem;
 }
 
-.movie-list {
-  width: 75%;
-  margin: 0 auto 10rem auto;
-}
-
-.movie-img2 {
-  width: 241px;
-  height: 358px;
-}
-
-.movie-list ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.movie-list ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.movie-list ul li img {
-  border-radius: 2rem;
-  border: 0.2rem solid;
-  box-shadow: var(--box-shadow1);
-  margin-bottom: 1rem;
-}
-
-.movie-list ul li p {
-  color: var(--primary-font-color);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.movie-list ul li button {
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: var(--box-shadow1);
-  background-color: var(--secondary-color);
-  color: var(--primary-font-color);
-  font-size: 1.6rem;
-}
-
-.alert {
+.alert{
   text-align: center;
-  color: var(--primary-font-color);
-  padding: 2rem;
-  background-color: var(--secondary-color);
-  width: 35rem;
-  margin: auto;
-  border-radius: 3rem;
+    color: var(--primary-font-color);
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    width: 35rem;
+    margin: auto;
+    border-radius: 3rem;
 }
 
-.success {
+.success{
   color: var(--success);
 }
 
-.error {
+.error{
   color: var(--error);
 }
 
