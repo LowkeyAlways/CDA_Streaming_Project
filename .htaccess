@@ -8,3 +8,4 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 
 # Rediriger spécifiquement vers NosFilms.php si la requête correspond
 RewriteRule ^nosfilms$ Views/NosFilms.php [L]
+RewriteRule ^location$ Views/Location.php [L]

@@ -1,6 +1,6 @@
 <?php
 
-include_once "../Models/UserModel.php";
+include_once "./Models/UserModel.php";
 
 class UserController {
 
@@ -25,11 +25,11 @@ class UserController {
 
             if ($registerStatus === 'success') {
                 echo "<p class=\"alert\">Inscription effectuée :
-                      <a href=\"../View/Login.php\" class=\"success\" title=\"pub\">Connectez vous</a>
+                      <a href=\"index.php?action=login\" class=\"success\" title=\"pub\">Connectez vous</a>
                       </p>";
             } elseif ($registerStatus === 'exists') {
                 echo "<p class=\"alert\">Vous êtes déja inscrit, 
-                <a href=\"../View/Login.php\" class=\"success\" title=\"pub\">Connectez vous</a>
+                <a href=\"index.php?action=login\" class=\"success\" title=\"pub\">Connectez vous</a>
                 </p>";
             } else {
                 echo "<p class=\"alert\">Une erreur s'est produite lors de l'inscription.</p>";
@@ -45,7 +45,7 @@ class UserController {
             $userModel = new UserModel($this->db);
 
             if ($userModel->login($email, $password)) {
-                header('Location: ../Views/Location.php');
+                header('Location: index.php?action=location');
                 exit();
             } else {
                 echo "<p class=\"alert\">Identifiants incorrects. Veuillez réessayer.</p>";
