@@ -1,3 +1,11 @@
+<?php 
+session_start();
+include './config/db_conn.php';
+
+$loggedInUser = isset($_SESSION['name']) ? $_SESSION['name'] : null;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Live Streaming</title>
   <link rel="stylesheet" href="./public/css/reset.css" />
-  <link rel="stylesheet" href="./public/css/main.css" />
+  <link rel="stylesheet" href="./public/css/main1.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon/favicon-16x16.png" />
@@ -26,8 +34,12 @@
         <li><a href="index.php?action=nosfilms" class="nav-link">Nos films</a></li>
       </ul>
       <ul class="second-ul">
-        <li><a href="index.php?action=login" class="nav-link">Se connecter</a></li>
-        <li><a href="index.php?action=register" class="nav-link">S'inscrire</a></li>
+      <?php if ($loggedInUser) : ?>
+          <li><span class="nav-link connected">Bonjour, <?php echo $loggedInUser; ?></span></li>
+        <?php else : ?>
+          <li><a href="index.php?action=login" class="nav-link">Se connecter</a></li>
+          <li><a href="index.php?action=register" class="nav-link">S'inscrire</a></li>
+        <?php endif; ?>
         <li class="nav_btns"><i class="fa-solid fa-moon change-theme" tabindex=0 aria-hidden="true" id="theme-button"></i></li>
       </ul>
     </nav>
