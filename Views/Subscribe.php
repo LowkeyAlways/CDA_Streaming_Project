@@ -83,8 +83,8 @@ include './config/db_conn.php';
   <footer>
     <p></p>
   </footer>
-  <script src="../public/js/app.js"></script>
-  <script src="../public/js/date.js"></script>
+  <script src="./public/js/app.js"></script>
+  <script src="./public/js/date.js"></script>
 </body>
 
 </html>

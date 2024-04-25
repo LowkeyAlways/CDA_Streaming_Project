@@ -15,7 +15,7 @@
   --border: #c4c4c4;
   --success: #01ff0d;
   --error: #be1900;
-  --connected: #35fc3d;
+  --connected: #f0ff2e;
 }
 
 body.dark-theme {
@@ -258,6 +258,11 @@ nav ul li:last-child {
   margin: 3rem 0rem 10rem 0rem;
 }
 
+.form_loc{
+  margin-top: 0.4rem;
+
+}
+
 fieldset {
   margin: 5rem auto;
   border: 0;
@@ -369,7 +374,7 @@ form input {
 }
 
 .movie-list ul li p {
-  color: var(--primary-font-color);
+  color: #fff;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
