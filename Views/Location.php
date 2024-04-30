@@ -3,7 +3,6 @@ session_start();
 include './config/db_conn.php';
 
 $loggedInUser = isset($_SESSION['name']) ? $_SESSION['name'] : null;
-
 ?>
 
 <!DOCTYPE html>
